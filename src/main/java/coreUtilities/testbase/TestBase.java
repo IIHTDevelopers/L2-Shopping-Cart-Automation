@@ -28,11 +28,11 @@ public class TestBase
 			String browser = map.get("browser");
 			if(browser.equalsIgnoreCase("Chrome"))
 			{
-				WebDriverManager.chromedriver().setup();
-				ChromeOptions options = new ChromeOptions();
+				// Set system property to specify the location of ChromeDriver
+		        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
+		        ChromeOptions options = new ChromeOptions();
 				options.addArguments("--start-maximized");
 		        options.addArguments("--disable-notifications");
-		        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
 				driver = new ChromeDriver(options);
 			}
 			else if(browser.equalsIgnoreCase("Firefox"))
