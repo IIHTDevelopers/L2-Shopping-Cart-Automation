@@ -17,13 +17,16 @@
 		"new_arrival_text":"new arrivals"
 	},
 	"Selenium_Ruby":{
-		"Selenium_Ruby_title":"Basket – Automation Practice Site"
+		"Selenium_Ruby_title":"Selenium Ruby – Automation Practice Site"
 	},
 	"Message":{
 		"message_details":" “Selenium Ruby” has been added to your basket."
 	},
 	"Remove_Message":{
 		"Remove_message_details":"Selenium Ruby removed. "
+	},
+	"Billing_Details":{
+		"Billing_Details_title":"Checkout – Automation Practice Site"
 	}
 }
 
