@@ -128,10 +128,10 @@ public class Practice_Automation_L1_TestCases extends AppTestBase {
 	public void navigateToHomePage() throws Exception {
 		try {
 			Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "HomePage_Title");
-			yakshaAssert(currentTest(), L1PageClass.navigate_to_Home_page().equals(expectedData.get("HomepageTitle")),
+			String title = L1PageClass.navigate_to_Home_page();
+			yakshaAssert(currentTest(), title.equals(expectedData.get("HomepageTitle")),
 					businessTestFile);
-			Assert.assertEquals(L1PageClass.navigate_to_Home_page(), expectedData.get("HomepageTitle"),
-					"page title is not matching please check manually");
+			Assert.assertEquals(title, expectedData.get("HomepageTitle"));
 		} catch (Exception ex) {
 			yakshaAssert(currentTest(), false, businessTestFile);
 			Assert.assertTrue(false);
@@ -183,11 +183,11 @@ public class Practice_Automation_L1_TestCases extends AppTestBase {
 	public void navigates_to_Selenium_Ruby() throws Exception {
 		try {
 			Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "Selenium_Ruby");
+			String title = L1PageClass.navigate_to_Home_page();
 			yakshaAssert(currentTest(),
-					L1PageClass.navigate_to_Home_page().equals(expectedData.get("Selenium_Ruby_title")),
+					title.equals(expectedData.get("Selenium_Ruby_title")),
 					businessTestFile);
-			Assert.assertEquals(L1PageClass.navigate_to_Home_page(), expectedData.get("Selenium_Ruby_title"),
-					"page title is not matching please check manually");
+			Assert.assertEquals(title, expectedData.get("Selenium_Ruby_title"));
 		} catch (Exception ex) {
 			yakshaAssert(currentTest(), false, businessTestFile);
 			Assert.assertTrue(false);
@@ -226,10 +226,10 @@ public class Practice_Automation_L1_TestCases extends AppTestBase {
 	public void verify_message() throws Exception {
 		try {
 			Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "Message");
-			yakshaAssert(currentTest(), L1PageClass.verifyMessages().equals(expectedData.get("message_details")),
+			String message = L1PageClass.verifyMessages();
+			yakshaAssert(currentTest(), message.equals(expectedData.get("message_details")),
 					businessTestFile);
-			Assert.assertEquals(L1PageClass.verifyMessages(), expectedData.get("message_details"),
-					"page title is not matching please check manually");
+			Assert.assertEquals(message, expectedData.get("message_details"));
 		} catch (Exception ex) {
 			yakshaAssert(currentTest(), false, businessTestFile);
 			Assert.assertTrue(false);
@@ -417,11 +417,11 @@ public class Practice_Automation_L1_TestCases extends AppTestBase {
 	public void ValidateAnRemoveMessage() throws Exception {
 		try {
 			Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "Remove_Message");
+			String message = L1PageClass.verifyRemoveMessages();
 			yakshaAssert(currentTest(),
-					L1PageClass.verifyRemoveMessages().equals(expectedData.get("Remove_message_details")),
+					message.equals(expectedData.get("Remove_message_details")),
 					businessTestFile);
-			Assert.assertEquals(L1PageClass.verifyRemoveMessages(), expectedData.get("message_details"),
-					"remove message is not matching please check manually");
+			Assert.assertEquals(message, expectedData.get("Remove_message_details"));
 		} catch (Exception ex) {
 			yakshaAssert(currentTest(), false, businessTestFile);
 			Assert.assertTrue(false);
@@ -488,11 +488,11 @@ public class Practice_Automation_L1_TestCases extends AppTestBase {
 	public void navigate_to_Billing_Details_page() throws Exception {
 		try {
 			Map<String, String> expectedData = new FileOperations().readJson(expectedDataFilePath, "Billing_Details");
+			String title = L1PageClass.Verify_Billing_Details_page();
 			yakshaAssert(currentTest(),
-					L1PageClass.Verify_Billing_Details_page().equals(expectedData.get("Billing_Details_title")),
+					title.equals(expectedData.get("Billing_Details_title")),
 					businessTestFile);
-			Assert.assertEquals(L1PageClass.Verify_Billing_Details_page(), expectedData.get("Billing_Details_title"),
-					"page title is not matching please check manually");
+			Assert.assertEquals(title, expectedData.get("Billing_Details_title"));
 		} catch (Exception ex) {
 			yakshaAssert(currentTest(), false, businessTestFile);
 			Assert.assertTrue(false);
